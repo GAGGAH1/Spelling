@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Using Tailwind CSS for the fourth version</title>
+</head>
+<body>
+    <nav class="bg-gradient-to-r from-[#ff7e5f] to-[#feb47b] p-4">
+        <div class="container mx-auto flex flex-wrap items-center justify-between text-white">
+            <div class="flex items-center">
+                <img src="image/logos.avif" alt="logo" width="40px" class="rounded-lg">
+            </div>
+            <div class="lg:hidden">
+                <button id="menu-toggle" class="focus:outline-none">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="w-full lg:flex lg:items-center lg:w-auto sm:hidden md:hidden">
+                <ul class="mx-auto flex items-center justify-between gap-2 lg:gap-4 mt-4 lg:mt-0">
+                    <li><a href="#" class="hover:text-gray-200">POOR GOVERNMENT KIDS GAMES</a></li>
+                </ul>
+            </div>
+            <div class="my-2 hidden lg:block">
+                <button class="bg-[#a6c1ee] text-white px-5 py-2 rounded-lg hover:bg-green-600">Free Money</button>
+            </div>
+        </div>
+        <div id="mega-menu" class="hidden lg:hidden bg-white text-black p-4 mt-4 rounded-lg shadow-lg">
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <h3 class="font-semibold text-gray-700">Tinubu</h3>
+                    <ul>
+                        <li><a href="#" class="block py-2 text-gray-600 hover:text-gray-900">Fuel</a></li>
+                        <li><a href="#" class="block py-2 text-gray-600 hover:text-gray-900">Price</a></li>
+                        <li><a href="#" class="block py-2 text-gray-600 hover:text-gray-900">Foundation</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <div id="image-container" class="flex justify-center items-center bg-white p-4 rounded-lg shadow-lg mb-4">
+        <!-- Image will be displayed here -->
+    </div>
+
+    <div id="message-container" class="text-center text-lg font-medium text-red-500 mb-4">
+        <!-- Messages will be displayed here -->
+    </div>
+
+    <div id="timer" class="text-right text-xl font-semibold text-blue-800 mb-4">
+        <!-- Timer will be displayed here -->
+        
+    </div>
+    <div class="text-left mb-6">
+        <button id="clear-word" class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition duration-300 ease-in-out">
+            Clear
+        </button>
+    </div>
+    
+
+    <div id="spelt-word" class="text-center text-2xl font-semibold text-gray-800 mb-6">
+        <!-- Spelt word will be displayed here -->
+    </div>
+
+    <!-- Alphabet Buttons Container -->
+    <div id="alphabet-buttons" class="flex flex-col items-center space-y-2 mb-8">
+        <!-- Keyboard layout will be generated here -->
+    </div>
+
+    <div id="report-container" class="text-center bg-white p-8 rounded-lg shadow-lg">
+        <!-- Report will be displayed here -->
+    </div>
+
+    <script src="fourth.js"></script>
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            var megaMenu = document.getElementById('mega-menu');
+            megaMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
