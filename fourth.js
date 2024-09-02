@@ -47,7 +47,7 @@ function loadImageAndAlphabets() {
     // Generate the keyboard layout
     keyboardLayout.forEach(row => {
         const rowDiv = document.createElement('div');
-        rowDiv.className = 'flex justify-center space-x-2 mb-2';
+        rowDiv.className = 'flex justify-center lg:space-x-2 space-x-0.5 mb-2';
 
         row.split('').forEach(letter => {
             const button = document.createElement('button');
